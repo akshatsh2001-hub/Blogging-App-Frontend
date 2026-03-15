@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBlog - Full Stack Blogging</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h1 class="logo">DevBlog</h1>
+        <ul class="nav-links">
+            <li><a href="#" id="nav-home">Home (Public)</a></li>
+            <li><a href="#" id="nav-auth">Login / Sign Up</a></li>
+            <li><a href="#" id="nav-dashboard" class="hidden">My Dashboard</a></li>
+            <li><a href="#" id="nav-logout" class="hidden">Logout</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+
+        <section id="public-feed-section">
+            <h2 class="section-title">Latest Posts</h2>
+            <div id="public-posts-container">
+                </div>
+        </section>
+
+        <section id="auth-section" class="hidden">
+            <div class="auth-card">
+                <h2 id="auth-title">Login</h2>
+                <form id="auth-form">
+                    <input type="text" id="username" placeholder="Username" required>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <button type="submit" id="auth-btn">Login</button>
+                </form>
+                <p>
+                    <span id="toggle-auth-text">Don't have an account?</span> 
+                    <a href="#" id="toggle-auth-link">Sign up</a>
+                </p>
+                <p id="auth-message"></p>
+            </div>
+        </section>
+
+        <section id="dashboard-section" class="hidden">
+            <div class="dashboard-header">
+                <h2>Welcome, <span id="user-display"></span></h2>
+                <button id="show-editor-btn" class="primary-btn">+ Create New Post</button>
+            </div>
+
+            <div id="post-editor" class="editor-card hidden">
+                <h3 id="editor-title">Write a new post</h3>
+                <form id="post-form">
+                    <input type="hidden" id="post-id"> <input type="text" id="post-title" placeholder="Post Title" required>
+                    <textarea id="post-content" rows="10" placeholder="Write your content here..." required></textarea>
+                    <div class="editor-actions">
+                        <button type="button" id="cancel-edit-btn" class="secondary-btn">Cancel</button>
+                        <button type="submit" id="save-post-btn" class="primary-btn">Publish Post</button>
+                    </div>
+                </form>
+            </div>
+
+            <h3>Your Published Posts</h3>
+            <div id="user-posts-container">
+                </div>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
