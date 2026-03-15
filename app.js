@@ -1,7 +1,9 @@
 // ==========================================
 // Configuration & DOM Elements
 // ==========================================
-const API_URL = 'http://localhost:5000'; // Connect to your Express backend
+//const API_URL = 'http://localhost:5000'; // Connect to your Express backend
+
+const API_URL = 'https://blogging-app-backend-cwic.onrender.com';
 
 // Navigation
 const navHome = document.getElementById('nav-home');
